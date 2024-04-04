@@ -23,8 +23,20 @@ class TestValidateText {
     fun TextViewStringTest(){
         onView(withId(R.id.editTextUserInput)).perform(replaceText("TextView Validation"),closeSoftKeyboard())
         onView(withId(R.id.changeTextBt)).perform(click())
-
         onView(withId(R.id.textToBeChanged)).check(matches(withText("TextView Validation")))
     }
 
+    @Test
+    fun testEditTextTest1() {
+        onView(withId(R.id.editTextUserInput)).perform(replaceText("123"))
+        onView(withId(R.id.changeTextBt)).perform(click())
+        onView(withId(R.id.textToBeChanged)).check(matches(withText("123")))
+    }
+
+    @Test
+    fun testEditTextTest2() {
+        onView(withId(R.id.editTextUserInput)).perform(replaceText("123"))
+        onView(withId(R.id.activityChangeTextBtn)).perform(click())
+        onView(withId(R.id.show_text_view)).check(matches(withText("123")))
+    }
 }
