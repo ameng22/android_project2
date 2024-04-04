@@ -15,6 +15,16 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class TestValidateText {
-    
+
+    @get:Rule
+    var activityScenarioRule = activityScenarioRule<MainActivity>()
+
+    @Test
+    fun TextViewStringTest(){
+        onView(withId(R.id.editTextUserInput)).perform(replaceText("TextView Validation"),closeSoftKeyboard())
+        onView(withId(R.id.changeTextBt)).perform(click())
+
+        onView(withId(R.id.textToBeChanged)).check(matches(withText("TextView Validation")))
+    }
 
 }
