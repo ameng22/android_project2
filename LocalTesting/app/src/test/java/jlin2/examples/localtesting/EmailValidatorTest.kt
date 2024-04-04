@@ -34,4 +34,15 @@ class EmailValidatorTest {
     fun testEmailWithoutDomain() {
         assertFalse(EmailValidator.isValidEmail("testing123"))
     }
+
+    @Test
+    fun testEmailEmpty() {
+        assertFalse(EmailValidator.isValidEmail(""))
+    }
+
+    @Test
+    fun testEmailNull() {
+        assertFalse(EmailValidator.isValidEmail(null))
+    }
+
 }
