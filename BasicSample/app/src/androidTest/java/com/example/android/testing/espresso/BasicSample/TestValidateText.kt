@@ -28,7 +28,7 @@ class TestValidateText {
 
     @Test
     fun testEditTextTest1() {
-        onView(withId(R.id.editTextUserInput)).perform(replaceText("123"))
+        onView(withId(R.id.editTextUserInput)).perform(replaceText("123"),closeSoftKeyboard())
         onView(withId(R.id.changeTextBt)).perform(click())
         onView(withId(R.id.textToBeChanged)).check(matches(withText("123")))
     }
@@ -49,4 +49,13 @@ class TestValidateText {
         onView(withId(R.id.activityChangeTextBtn)).perform(click())
         onView(withId(R.id.show_text_view)).check(matches(withText("")))
     }
+
+    @Test
+    fun testEditText1() {
+        onView(withId(R.id.editTextUserInput)).perform(replaceText("abcdef"),closeSoftKeyboard())
+        onView(withId(R.id.changeTextBt)).perform(click())
+        onView(withId(R.id.textToBeChanged)).check(matches(withText("abcdef")))
+    }
+
+
 }
