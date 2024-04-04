@@ -39,4 +39,9 @@ class TestValidateText {
         onView(withId(R.id.activityChangeTextBtn)).perform(click())
         onView(withId(R.id.show_text_view)).check(matches(withText("123")))
     }
+    @Test
+    fun testEmptyEditText1() {
+        onView(withId(R.id.changeTextBt)).perform(click())
+        onView(withId(R.id.textToBeChanged)).check(matches(withText("")))
+    }
 }
