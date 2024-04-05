@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "jlin2.examples.localtesting"
+        applicationId "jlin2.examples.localtestinggroup6"
         minSdk 32
         targetSdk 32
         versionCode 1

@@ -1,4 +1,4 @@
-package jlin2.examples.localtesting
+package jlin2.examples.localtestinggroup6
 
 import android.text.Editable
 import android.text.TextWatcher

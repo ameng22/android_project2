@@ -1,4 +1,4 @@
-package jlin2.examples.localtesting
+package jlin2.examples.localtestinggroup6
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

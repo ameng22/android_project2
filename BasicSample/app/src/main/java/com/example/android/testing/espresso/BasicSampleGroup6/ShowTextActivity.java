@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.testing.espresso.BasicSample;
+package com.example.android.testing.espresso.BasicSampleGroup6;
 
 import com.google.common.base.Strings;
 
